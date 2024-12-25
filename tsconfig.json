@@ -19,7 +19,7 @@
       "@resolvers/*": ["graphql/resolvers/*"],
       "@schemas/*": ["graphql/schemas/*"]
     },
-    "target": "ES2020" // Modern target
+    "target": "ES2020"
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
