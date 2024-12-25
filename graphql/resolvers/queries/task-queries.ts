@@ -63,22 +63,6 @@ const RootQuery = new GraphQLObjectType({
       resolve(parent, args) {
         let filters = {};
 
-        if (args.searchTerm) {
-          filters.taskName = { $regex: args.searchTerm, $options: "i" };
-        }
-        if (args.priority) {
-          filters.priority = args.priority;
-        }
-        if (args.isDone !== undefined) {
-          filters.isDone = args.isDone;
-        }
-        if (args.createdBefore) {
-          filters.createdAt = { $lt: new Date(args.createdBefore) };
-        }
-        if (args.createdAfter) {
-          filters.createdAt = { $gt: new Date(args.createdAfter) };
-        }
-
         return Task.find(filters);
       },
     },
