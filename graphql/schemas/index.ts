@@ -1,11 +1,6 @@
-import { gql } from "graphql-tag";
+import { mergeTypeDefs } from "@graphql-tools/merge";
+import taskSchema from "@schemas/task-schema";
 
-export const typeDefs = gql`
-  type Query {
-    helloQuery: String
-  }
+console.log(taskSchema); // Check if the schema is loaded correctly
 
-  type Mutation {
-    sayHello(name: String!): String
-  }
-`;
+export default mergeTypeDefs([taskSchema]);

@@ -1,11 +1,4 @@
-import { sayHello } from "./mutations/say-hello";
-import { helloQuery } from "./queries/hello-query";
+import { mergeResolvers } from "@graphql-tools/merge";
+import taskResolvers from "./mutations/task-mutation";
 
-export const resolvers = {
-  Query: {
-    helloQuery,
-  },
-  Mutation: {
-    sayHello,
-  },
-};
+export default mergeResolvers([taskResolvers]);

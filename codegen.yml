@@ -1,5 +1,5 @@
 overwrite: true
-schema: "./graphql/schemas/index.ts"
+schema: "./graphql/schemas/task-schema.ts" # Path to the schema file
 generates:
   "./generated/index.ts":
     plugins:
